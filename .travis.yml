@@ -2,3 +2,10 @@
 language: scala
 scala:
    - 2.11.8
+   
+env:
+  - working_dir: embedded-streaming-services
+  
+script:
+  - 'cd ${working_dir}'
+  - 'sbt -jvm-opts travis/jvmopts.test test'
