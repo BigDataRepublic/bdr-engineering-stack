@@ -5,7 +5,7 @@ import java.lang.reflect.Method
 import java.util.Properties
 
 import com.typesafe.scalalogging.LazyLogging
-import nl.bigdatarepublic.streaming.embedded.MapToPropsImplicit._
+import MapToPropsImplicit._
 import nl.bigdatarepublic.streaming.embedded.entity.EmbeddedService
 import org.apache.commons.io.FileUtils
 import org.apache.zookeeper.server.quorum.QuorumPeerConfig
