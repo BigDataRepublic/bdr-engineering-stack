@@ -118,4 +118,4 @@ lazy val embeddedStreamingServicesApp = Project(id = "app", base = file("app")).
         val oldStrategy = (assemblyMergeStrategy in assembly).value
         oldStrategy(x)
     }
-  ).dependsOn(embeddedStreamingEntity, embeddedStreamingKafkaAdapter, embeddedStreamingRedisAdapter)
+  ).dependsOn(embeddedStreamingEntity, embeddedStreamingKafkaAdapter, embeddedStreamingRedisAdapter, embeddedStreamingZookeeperAdapter)

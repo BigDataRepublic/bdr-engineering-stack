@@ -51,7 +51,7 @@ class EmbeddedKafkaConnect(props: Map[String, String], connectorProps: List[Map[
           Path(props("offset.storage.file.filename")).parent.deleteRecursively()
         } match {
           case Success(_) => logger.info("Successfully cleaned Kafka Connect data dir.")
-          case Failure(e) => logger.error("Failed to clean Kafka Connect data dir.", e)
+          case Failure(e) => logger.warn("Failed to clean Kafka Connect data dir.", e)
         }
       }
       connect.start()
@@ -72,9 +72,6 @@ class EmbeddedKafkaConnect(props: Map[String, String], connectorProps: List[Map[
       }}.logSuccess { _ => {
         logger.info("All connectors were successfully added.")
       }}
-//      }} recover {
-//        case _ => connect.stop()
-//      }
 
 
       Await.ready(future, Duration.Inf)

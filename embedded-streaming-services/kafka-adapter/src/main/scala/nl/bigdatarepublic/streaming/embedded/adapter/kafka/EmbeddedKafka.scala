@@ -23,7 +23,7 @@ class EmbeddedKafka(props: Map[String, String], clearState: Boolean) extends Laz
         Try(Path(x).deleteRecursively()) match {
           case Success(true) => logger.info("Successfully cleaned Kafka data dir...")
           case Success(false) => logger.info("Failed to clean Kafka data dir...")
-          case Failure(e) => logger.error("Failed to clean Kafka data dir", e)
+          case Failure(e) => logger.warn("Failed to clean Kafka data dir", e)
         }
       }
     }
