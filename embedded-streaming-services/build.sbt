@@ -1,6 +1,7 @@
 import sbt._
 import sbt.Keys._
 
+publish := { } // Do not try to publish root project to bintray.
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 val scalaMockTest = "org.scalamock" %% "scalamock-scalatest-support" % "3.2.2" % "test"
@@ -36,7 +37,7 @@ lazy val commonSettings = Seq(
     "Confluent.io Maven Repository" at "http://packages.confluent.io/maven"
   ),
   organization := "nl.bigdatarepublic",
-  version := "0.2.0-SNAPSHOT",
+  version := "0.1.0",
   crossPaths := false,
   scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
@@ -117,5 +118,6 @@ lazy val embeddedStreamingServicesApp = Project(id = "app", base = file("app")).
       case x =>
         val oldStrategy = (assemblyMergeStrategy in assembly).value
         oldStrategy(x)
-    }
+    },
+    publish := { } // Do not publish to bintray.
   ).dependsOn(embeddedStreamingEntity, embeddedStreamingKafkaAdapter, embeddedStreamingRedisAdapter, embeddedStreamingZookeeperAdapter)
