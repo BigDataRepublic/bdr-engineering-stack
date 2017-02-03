@@ -1,1 +1,1 @@
-from ds_prod_api.ds_prod_api.apis import FlaskApi
+from ds_prod_api.apis import FlaskApi
