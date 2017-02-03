@@ -1,1 +1,1 @@
-import ds_prod_api.ds_prod_api.apis
+import ds_prod_api
