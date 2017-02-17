@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 
 class FlaskApi(object):
@@ -8,11 +8,14 @@ class FlaskApi(object):
         self.model = model
         self.feature_extractor = feature_extractor
         self.app = Flask(__name__)
-        self.app.add_url_rule('/predict/<string:predict_id>', 'predict', self.predict)
+        self.app.add_url_rule('/predict', 'predictFromBody', self.predict, methods=['POST'])
 
-    def predict(self, predict_id):
+
+    @app.route('/users/')
+    def predictFromBody(self):
         try:
-            features = self.feature_extractor.get_features(predict_id)
+            content = request.get_json()
+            features = self.feature_extractor.get_features(content)
             result = self.model.predict(features)
 
         except Exception:
