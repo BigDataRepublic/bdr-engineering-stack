@@ -1,5 +1,5 @@
-from ds_prod_api.ds_prod_api.abstracts import Model, FeatureExtractor
-from ds_prod_api.ds_prod_api.apis.FlaskApi import FlaskApi
+from ds_prod_api.abstracts import Model, FeatureExtractor
+from ds_prod_api.apis.FlaskApi import FlaskApi
 
 
 class DemoModel(Model):
