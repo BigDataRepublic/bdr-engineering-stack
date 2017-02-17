@@ -8,11 +8,9 @@ class FlaskApi(object):
         self.model = model
         self.feature_extractor = feature_extractor
         self.app = Flask(__name__)
-        self.app.add_url_rule('/predict', 'predictFromBody', self.predict, methods=['POST'])
+        self.app.add_url_rule('/predict', 'predict', self.predict, methods=['POST'])
 
-
-    @app.route('/users/')
-    def predictFromBody(self):
+    def predict(self):
         try:
             content = request.get_json()
             features = self.feature_extractor.get_features(content)
