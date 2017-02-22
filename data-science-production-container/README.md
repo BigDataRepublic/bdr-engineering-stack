@@ -2,10 +2,20 @@
 
 #### Getting started
 
+
+To run the baseline model, we first need to download the pickled version of
+this model.
+
 ```
 # pwd
 ${LOCAL_PATH}/bdr-engineering-stack/data-science-production-container/DemoContainer
+# mkdir models
+# wget -O models/PartyClassifier.pkl http://bdr-engineering-models.s3-eu-central-1.amazonaws.com/PartyClassifier.pkl
+```
 
+Now we can build the container that will contain the service.
+
+```
 # docker build -t bdr/verkiezingen:1.0 .
 # docker run -p 5000:5000 bdr/verkiezingen:1.0
 ```
