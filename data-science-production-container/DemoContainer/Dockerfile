@@ -11,6 +11,7 @@ ADD . /ds_prod
 RUN conda env create -f /ds_prod/environment.yml -n "ds_prod"
 RUN bash -c "source activate ds_prod"
 
+RUN pip install --upgrade pip
 RUN pip install git+https://github.com/BigDataRepublic/bdr-engineering-stack.git@Feature/model_docker#subdirectory=data-science-production-container/ds_prod_api
 
 CMD ["python", "/ds_prod/SanderTest.py"]
