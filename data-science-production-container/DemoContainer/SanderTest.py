@@ -1,25 +1,10 @@
-from ds_prod_api.abstracts import Model, FeatureExtractor
 from ds_prod_api.apis.FlaskApi import FlaskApi
 
+from predictive_models import demo as demo_model
+from feature_extractors import demo as demo_extractor
 
-class DemoModel(Model):
-    def load(self):
-        print("hi")
-
-    def predict(self, feature_vector):
-        return "Result"
-
-    def default(self):
-        return "In case of problem return this"
-
-
-class DemoFeatureExtractor(FeatureExtractor):
-    def get_features(self, id):
-        return None
-
-
-model = DemoModel()
-extractor = DemoFeatureExtractor()
+model = demo_model.DemoModel()
+extractor = demo_extractor.DemoFeatureExtractor()
 
 api = FlaskApi(model, extractor)
 
