@@ -49,7 +49,7 @@ class PartyClassifier:
 
         return self.estimator.predict_proba(X)
 
-    def __tokenize(self, text):
+    def tokenize(self, text):
         """Converts text to tokens."""
         tokens = word_tokenize(text, language='dutch')
         tokens = filter(lambda x: len(x) > 1, tokens)

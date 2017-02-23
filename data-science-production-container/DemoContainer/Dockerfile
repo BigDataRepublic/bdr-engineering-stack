@@ -10,4 +10,4 @@ RUN conda env create -f /ds_prod/environment.yml python=2.7
 ADD . /ds_prod/app
 
 WORKDIR /ds_prod/app/
-CMD bash -c "source activate ds_prod && python SanderTest.py"
+CMD bash -c "source activate ds_prod && python main.py"
