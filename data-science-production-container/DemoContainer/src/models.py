@@ -24,7 +24,7 @@ class PartyClassifier:
 
             ('vectorizer', TfidfVectorizer(input='content', encoding='utf-8',
                                            decode_error='strict', strip_accents='unicode',
-                                           lowercase=True, preprocessor=None, tokenizer=self.__tokenize,
+                                           lowercase=True, preprocessor=None, tokenizer=self.tokenize,
                                            analyzer='word', stop_words=stopwords.words('dutch'),
                                            ngram_range=(1, 3), max_df=0.5, min_df=1, max_features=None,
                                            vocabulary=None, binary=False, dtype=np.int64,
