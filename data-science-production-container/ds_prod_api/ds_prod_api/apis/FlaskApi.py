@@ -16,8 +16,9 @@ class FlaskApi(object):
             features = self.feature_extractor.get_features(content)
             result = self.model.predict(features)
 
-        except Exception:
+        except Exception as e:
             result = self.model.default()
+            print(e)
 
         return result
 
