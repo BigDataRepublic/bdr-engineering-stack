@@ -95,7 +95,7 @@ Send a POST call to the api, and check the reponse. The model takes two feaures:
 curl \
     -H "Content-Type: application/json" \
     -X POST \
-    -d '{"LotArea": 200,"YearBuilt":1978}' \
+    -d '[{"LotArea": 200,"YearBuilt":1978}]' \
     http://localhost:5000/predict
 ```
 
