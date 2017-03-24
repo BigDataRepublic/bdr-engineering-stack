@@ -14,7 +14,7 @@ The framework helps you to create a simple HTTP API which can expose predictive 
 This exercise will help you get started using the framework. The goal is to bring a house price prediction model into production.
 Building the model is beyond the scope of this exercise. Therefore a simple regression model was created based a Kaggle dataset [Kaggle dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques). It is created with the scikit-learn package and can be found in the `Exercise\models` direcotry as a pickle file. 
 
-This exercise will be based of the Exercise directory, a number of files have been prepared, during the exercise all steps will be explained. 
+This exercise will be based of the Exercise directory, a number of files have been prepared, during the exercise all steps will be explained. The exercise contains the same implementation as the DemoContainer, whenever you get stuck, you can peak in that directory for a little inspiration ;-).
 
 #### Step 1
 The `main.py` file will be used for the implementation of the framework. In order to implement it, we first need to import the framework definitions. 
