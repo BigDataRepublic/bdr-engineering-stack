@@ -17,6 +17,7 @@ class BaselineLmModel(Model):
         print("Loading baseline model")
         self.estimator = pickle.load(open(path + '/models/lm.p', "rb"), encoding="UTF-8")
 
+
     def predict(self, feature_vector):
         print("Received predict in model with feature vector")
         print(feature_vector)
