@@ -2,5 +2,5 @@ name: ds_prod
 dependencies:
 - flask
 - pip:
-  - git+https://github.com/BigDataRepublic/bdr-engineering-stack.git@Feature/model_docker#subdirectory=data-science-production-container/ds_prod_api
+  - git+https://github.com/BigDataRepublic/ds-prod-api.git#egg=ds_prod_api-0.0.1
 
