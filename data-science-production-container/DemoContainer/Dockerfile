@@ -7,4 +7,4 @@ RUN conda env create -f /opt/ds_prod/environment.yml
 COPY . /opt/ds_prod/app
 
 WORKDIR /opt/ds_prod/app/
-CMD bash -c "source activate ds_prod && python main.py"
+CMD bash -c "source activate ds_prod && python3 -m ds_prod.main"
