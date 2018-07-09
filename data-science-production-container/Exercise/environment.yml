@@ -1,4 +1,4 @@
-ame: ds_prod
+name: ds_prod
 dependencies:
 - flask
 - pip:
