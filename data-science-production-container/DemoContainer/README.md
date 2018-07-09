@@ -1,4 +1,4 @@
-Demo container of an flask wrapped model service
+Demo container of a flask wrapped model service
 ==============================
 
 ## Getting started:
